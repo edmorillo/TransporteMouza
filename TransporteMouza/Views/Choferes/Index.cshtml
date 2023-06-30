@@ -8,11 +8,12 @@
 
 
 <p>
-    <a asp-action="Create" class="btn btn-success">Create New</a>
+    <a asp-action="Create" class="btn btn-success">Crear Chofer</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
+<div class="table-responsive">
+<table class="table"  >
+    <thead class="table-dark">
+        <tr >
             <th>
                 @Html.DisplayNameFor(model => model.Nombre)
             </th>
@@ -83,14 +84,15 @@
                 @Html.DisplayFor(modelItem => item.LicenciaVen)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ProvNavigation.IdProvincia)
+                @Html.DisplayFor(modelItem => item.ProvNavigation.Provincia)
             </td>
             <td>
-                    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.IdChoferes">Edit</a> <br>
-                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.IdChoferes">Details</a> <br> 
-                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdChoferes">Delete</a>
+                    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.IdChoferes">Editar</a> <br>
+                    <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.IdChoferes">Detalles</a> <br> 
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdChoferes">Eliminar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>

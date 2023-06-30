@@ -47,7 +47,7 @@ namespace TransporteMouza.Controllers
         // GET: Choferes/Create
         public IActionResult Create()
         {
-            ViewData["Prov"] = new SelectList(_context.Provincia, "IdProvincia", "IdProvincia");
+            ViewData["Prov"] = new SelectList(_context.Provincia, "Provincia", "Provincia");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace TransporteMouza.Controllers
             {
                 return NotFound();
             }
-            ViewData["Prov"] = new SelectList(_context.Provincia, "IdProvincia", "IdProvincia", chofere.Prov);
+            ViewData["Prov"] = new SelectList(_context.Provincia, "Provincia", "Provincia", chofere.Prov);
             return View(chofere);
         }
 
@@ -117,7 +117,7 @@ namespace TransporteMouza.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Prov"] = new SelectList(_context.Provincia, "IdProvincia", "IdProvincia", chofere.Prov);
+            ViewData["Prov"] = new SelectList(_context.Provincia, "Provincia", "Provincia", chofere.Prov);
             return View(chofere);
         }
 

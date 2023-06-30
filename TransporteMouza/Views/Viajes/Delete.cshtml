@@ -6,7 +6,17 @@
 
 <h1>Delete</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<hr />
+<script type="text/javascript">
+    function DeleteConfirm() {
+        if (confirm("Estás seguro que deseas eliminar?"))
+            return true;
+        else
+            return false;
+    }
+</script>
+
+
 <div>
     <h4>Viaje</h4>
     <hr />
@@ -69,7 +79,8 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdViajes" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" onclick="return  DeleteConfirm()" /> |
+        <input type="hidden" name="del" id="del" values="" />
+        <a asp-action="Index" class="btn btn-info">Back to List</a>
     </form>
 </div>

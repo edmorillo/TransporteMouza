@@ -6,6 +6,16 @@
 
 <h1>Edit</h1>
 
+<hr />
+<script type="text/javascript">
+    function EditConfirm() {
+        if (confirm("Esta seguro que deseas editar?"))
+            return true;
+        else
+            return false;
+    }
+</script>
+
 <h4>Viaje</h4>
 <hr />
 <div class="row">
@@ -59,7 +69,8 @@
                 <span asp-validation-for="NumContenedor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" onclick="return  EditConfirm()" />
+                <a asp-action="Index" class="btn btn-info">Back to List</a>
             </div>
         </form>
     </div>

@@ -49,9 +49,9 @@ namespace TransporteMouza.Controllers
         // GET: Viajes/Create
         public IActionResult Create()
         {
-            ViewData["IdChoferes"] = new SelectList(_context.Choferes, "IdChoferes", "IdChoferes");
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente");
-            ViewData["IdUnidad"] = new SelectList(_context.Unidads, "IdUnidad", "IdUnidad");
+            ViewData["IdChoferes"] = new SelectList(_context.Choferes, "Nombre", "Nombre");
+            ViewData["IdCliente"] = new SelectList(_context.Clientes, "Nombre", "Nombre");
+            ViewData["IdUnidad"] = new SelectList(_context.Unidads, "Matricula", "Matricula");
             return View();
         }
 
