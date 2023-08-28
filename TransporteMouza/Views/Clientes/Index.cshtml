@@ -7,7 +7,7 @@
 <h1>Clientes</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-success">Create New</a>
+    <a asp-action="Create" class="btn btn-success">Crear Cliente</a>
 </p>
 <div class="table-responsive">
 <table class="table">
@@ -80,9 +80,9 @@
                 @Html.DisplayFor(modelItem => item.IngresosBrutos)
             </td>
             <td>
-                        <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.IdCliente">Edit</a> <br>
-                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.IdCliente">Details</a> <br>
-                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdCliente">Delete</a>
+                        <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.IdCliente">Editar</a>
+                        <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.IdCliente">Detalles</a>
+                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdCliente">Eliminar</a>
             </td>
         </tr>
 }

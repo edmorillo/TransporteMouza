@@ -1,12 +1,12 @@
 ﻿@model TransporteMouza.Models.Cliente
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar";
 }
 
-<h1>Delete</h1>
+<h1>Eliminar</h1>
 
-<hr />
+
 <script type="text/javascript">
     function DeleteConfirm() {
         if (confirm("Estás seguro que deseas eliminar?"))
@@ -87,6 +87,6 @@
         <input type="hidden" asp-for="IdCliente" />
         <input type="submit" value="Delete" class="btn btn-danger" onclick="return  DeleteConfirm()" /> |
         <input type="hidden" name="del" id="del" values="" />
-        <a asp-action="Index" class="btn btn-info">Back to List</a>
+        <a asp-action="Index" class="btn btn-info">Volver</a>
     </form>
 </div>
